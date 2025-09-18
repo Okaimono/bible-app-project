@@ -38,20 +38,23 @@ if ("Notification" in window) {
     }
 }
 
-document.getElementById("clickForNotif").addEventListener("click", () => {
+
+function sendNewBibleVerse() {
     if (Notification.permission === "granted") {
-        showNotification();
+        showNotification;
     } else {
         Notification.requestPermission().then(permission => {
             if (permission === "granted") {
                 showNotification();
             }
-        });
+        })
     }
-});
+}
+
+setInterval(runEveryFiveMinutes,  30 * 1000); 
 
 function showNotification() {
-    new Notification("Bible Verse", getRandVerse());
+    new Notification(getRandVerse());
 }
 
 function getRandVerse() {
