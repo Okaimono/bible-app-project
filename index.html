@@ -2,14 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style rel="stylesheet" href="style.css"></style>
+    <title>Bible Verse Notifications</title>
 </head>
 <body>
-    <h1>Test</h1>
-    <p>Hi devin (and matthew if he can read this)</p>
-    <button id="clickForNotif">Click here to test notification button</button>
-    <script src="script.js"></script>
+    <h1>Bible Verse Notifications</h1>
+    <button id="startBtn">Enable Notifications</button>
+
+    <script>
+        let tempArray = [
+            { book: "John", chapter: 3, verse: 13, text: "No one has ascended into heaven, but He who descended from heaven: the Son of Man."},
+            { book: "John", chapter: 3, verse: 14, text: "As Moses lifted up the serpent in the wilderness, even so must the Son of Man be lifted up;"},
+            { book: "John", chapter: 3, verse: 15, text: "so that whoever believes will in Him have eternal life."},
+            { book: "John", chapter: 3, verse: 16, text: "For God so loved the world, that He gave His only begotten Son, that whoever believes in Him shall not perish, but have eternal life."},
+            { book: "John", chapter: 3, verse: 17, text: "For God did not send the Son into the world to judge the world, but that the world might be saved through Him."},
+            { book: "John", chapter: 3, verse: 18, text: "He who believes in Him is not judged; he who does not believe has been judged already, because he has not believed in the name of the only begotten Son of God."}
+        ];
+
+        const verseLength = tempArray.length;
+
+        // Get a random verse
+        function getRandVerse() {
+            const rand = Math.floor(Math.random() * verseLength);
+            return tempArray[rand].text;
+        }
+
+        // Show notification
+        function showNotification() {
+            new Notification("Bible Verse", { body: getRandVerse() });
+        }
+
+        // Enable notifications after user clicks button
+        document.getElementById("startBtn").addEventListener("click", () => {
+            if ("Notification" in window) {
+                if (Notification.permission === "granted") {
+                    showNotification();
+                } else if (Notification.permission !== "denied") {
+                    Notification.requestPermission().then(permission => {
+                        if (permission === "granted") {
+                            showNotification();
+                        } else {
+                            alert("You denied notification permission.");
+                        }
+                    });
+                } else {
+                    alert("You have denied notifications for this site.");
+                }
+
+                // Start interval after permission granted
+                setInterval(() => {
+                    if (Notification.permission === "granted") {
+                        showNotification();
+                    }
+                }, 5 * 60 * 1000); // every 5 minutes
+            } else {
+                alert("This browser does not support notifications.");
+            }
+        });
+    </script>
 </body>
 </html>
