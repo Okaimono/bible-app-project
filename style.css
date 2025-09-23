@@ -1,0 +1,53 @@
+.no-underline {
+    text-decoration: none;
+    cursor: pointer;
+}
+.link-to-lyrics {
+    color: black;
+    font-size: 125px;
+    background-color: lightgray;
+    border-bottom: black
+}
+.link-holder {
+    line-height: 1.5;
+}
+.return-button {
+    font-size: 125px;
+    color: white;
+    border: black;
+}
+h1 {
+    font-size: 100px;
+}
+header {
+    text-align: center;
+    background-color: lightcoral;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    justify-content: center;
+    margin: 0;
+}
+p {
+    line-height: 1.8;
+    font-size: 45px;
+    word-wrap: break-word;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    text-align: left;
+    padding: 10px;
+
+}
+.lyrics {
+    display: flex;
+    justify-content: center;
+}
+.main-page {
+    width: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
