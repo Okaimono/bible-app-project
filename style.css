@@ -1,0 +1,37 @@
+body, html{
+    height: 100%;
+    margin: 0; 
+}
+
+#lyrics {
+    font-size: 150px;
+}
+
+#picture-of-jesus {
+    width: 700px;
+    height: auto;
+}
+
+#main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p {
+    line-height: 1.2;
+    font-family: 'Quicksand', sans-serif;
+    padding: 30px;
+    white-space: normal;
+    text-align: left;
+    font-size: 50px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+h1 {
+    font-size: 100px;
+}

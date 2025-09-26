@@ -43,6 +43,7 @@ p {
     white-space: pre-wrap;
     text-align: left;
     padding: 10px;
+    width: 50vw;
 
 }
 .lyrics {
@@ -58,4 +59,8 @@ p {
 #title-of-song {
     width: 100;
     text-align: center;
+}
+
+#home-link {
+    background-color: teal;
 }
