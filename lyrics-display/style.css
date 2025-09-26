@@ -4,12 +4,13 @@
 }
 .link-to-lyrics {
     color: black;
-    font-size: 125px;
+    font-size: 70px;
     background-color: lightgray;
-    border-bottom: black
+    border-bottom: black;
+    
 }
 .link-holder {
-    line-height: 1.5;
+    line-height: 2;
 }
 .return-button {
     font-size: 125px;
@@ -50,4 +51,8 @@ p {
 * {
     margin: 0;
     padding: 0;
+}
+#title-of-song {
+    width: 100;
+    text-align: center;
 }
