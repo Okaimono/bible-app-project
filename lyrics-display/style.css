@@ -22,7 +22,7 @@ h1 {
 }
 header {
     text-align: center;
-    background-color: lightcoral;
+    background-color: salmon;
     position: sticky;
     z-index: 1000;
     top: 0;

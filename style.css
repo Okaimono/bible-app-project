@@ -1,6 +1,8 @@
 body, html{
     height: 100%;
     margin: 0; 
+    background-color: salmon;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #lyrics {
@@ -22,7 +24,6 @@ body, html{
 
 p {
     line-height: 1.2;
-    font-family: 'Quicksand', sans-serif;
     padding: 30px;
     white-space: normal;
     text-align: left;
@@ -34,4 +35,11 @@ p {
 
 h1 {
     font-size: 100px;
+}
+
+#love-jesus {
+    color: pink;
+}
+a {
+    color: white;
 }
